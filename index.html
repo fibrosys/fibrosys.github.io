@@ -2,12 +2,23 @@
 <html>
   <head>
     <title>AAAAAAAAAAAA</title>
+    <script>
+      var colorwheel = ["red", "green", "blue", "white"];
+      var imagewheel = ["poorly drawn miku.png", "horribly drawn miku.png"]
+      var index = 0;
+      function rave() {
+        document.body.style.backgroundColor = colorwheel[index % colorwheel.length];
+        document.getElementById("miku").setAttribute("src", "images/" + imagewheel[index % imagewheel.length]);
+        index++;
+      }
+    </script>
   </head>
   <body>
     <!--hi-->
     <h1>Welcome to <a href=https://fibrosys.github.io>fibrosys.github.io</a>!</h1>
     <hr>
     <p>I have no idea what to put on this page.<br>Meanwhile, have a poorly drawn Miku.</p>
-    <img src="./images/poorly drawn Miku.png">
+    <button onclick="rave()">SPAM THIS BUTTON 3 PAARTY HArd</button><br>
+    <img id="miku">
   </body>
 </html>
